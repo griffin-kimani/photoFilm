@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css?family=Tangerine');
+
+:root {
+    --font-family: 'Manrope', sans-serif;
+
+    --gradient-text: linear-gradient(89,97deg, #eeeeee)
+    --gradient-bar: linear-gradient(103,22deg, #eeeeee)
+
+    --color-bg: #040C18;
+    --color-text: white;
+    --color-footer: #000000;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; 
+    font-family: var(--font-family);
+    background-color: var(--color-bg);
+    color: var(--color-text);
+}
+
+section__padding {
+    padding: 4rem 6rem;
+}
+
+section__margin {
+    padding: 4rem 6rem;
+}
+
+@media screen and (max-width: 700px) {
+  .section__padding {
+    padding: 4rem;
+  }
+  .section__margin{
+    margin: 4rem;
+  }
+}
+
+@media screen and (max-width: 550px) {
+    .section__padding {
+      padding: 4rem 2rem;
+    }
+    .section__margin{
+      margin: 4rem 2rem;
+    }
+  }
+
+

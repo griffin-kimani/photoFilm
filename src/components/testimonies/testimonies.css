@@ -1,0 +1,39 @@
+.section {
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.testimonies-section {
+  text-align: center;
+}
+
+.testimonies {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.testimony {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  max-width: 500px;
+  flex: 1;
+}
+
+.testimony.reverse {
+  flex-direction: row-reverse;
+}
+
+.testimony-image {
+  width: 45%;
+  max-width: 200px;
+  border-radius: 10px;
+}
+
+.testimony-text {
+  flex: 1;
+}

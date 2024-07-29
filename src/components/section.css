@@ -1,0 +1,15 @@
+
+.section {
+  padding: 20px;
+}
+
+.section h2 {
+  font-size: 1.5em;
+}
+
+.section p {
+  font-size: 1em;
+  line-height: 1.5;
+}
+
+  

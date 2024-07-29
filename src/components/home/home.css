@@ -1,0 +1,58 @@
+.introduction {
+  text-align: center;
+  margin: 100px;
+  color: #333;
+}
+
+.image-container {
+  display: flex;
+  justify-content: center;
+  margin: 100px 0;
+}
+
+.image-box {
+  position: relative;
+  margin: 0 10px;
+  overflow: hidden;
+  border-radius: 5px;
+}
+
+.image-box img {
+  width: 600px; 
+  height: 500px; 
+  display: block;
+  object-fit: cover;
+}
+
+.hover-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 1.5rem;
+  text-align: center;
+  display: none;
+}
+
+.image-box:hover .hover-text {
+  display: block;
+}
+
+.label {
+  text-align: center;
+  margin-top: 10px;
+  font-size: 1.3rem;
+  color: #555;
+}
+
+.image-box a {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.3s ease;
+}
+
+.image-box a:hover {
+  transform: scale(1.05); 
+}

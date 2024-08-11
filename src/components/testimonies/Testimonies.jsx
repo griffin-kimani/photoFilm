@@ -24,13 +24,13 @@ const Testimonies = () => {
         <Testimony
           image={testimonyImage1}
           name="John Doe"
-          text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+          text="The truth is that the pain itself is important, it will be followed by the education of the student. But it happens at such a time that there is a great deal of work and pain."
           reverse={false}
         />
         <Testimony
           image={testimonyImage2}
           name="Jane Smith"
-          text="Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+          text="For I will come to the smallest detail, who does not engage in any kind of exercise unless he gains some benefit from it."
           reverse={true}
         />
       </div>

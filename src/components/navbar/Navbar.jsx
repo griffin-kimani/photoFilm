@@ -2,12 +2,17 @@ import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { RiMenu3Line, RiCloseLine } from 'react-icons/ri';
 import './navbar.css';
-import image1 from '../../assets/wed1.jpg';
-import image2 from '../../assets/wed3.jpg';
+import image1 from '../../assets/Couples/_LIC3071.jpg';
+import image2 from '../../assets/Couples/Image-39 (1).jpg';
+import image3 from '../../assets/Couples/DSC02818.jpg';
+import image4 from '../../assets/Couples/G&C-67.jpg';
+import image5 from '../../assets/Couples/image-2.jpg';
+
+const images = [image1, image2, image3, image4, image5];
 
 const Navbar = () => {
   const [toggleMenu, setToggleMenu] = useState(false);
-  const [slide, setSlide] = useState(false);
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [scrolled, setScrolled] = useState(false);
   const location = useLocation();
 
@@ -27,8 +32,8 @@ const Navbar = () => {
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setSlide(prev => !prev);
-    }, 5000);
+      setCurrentImageIndex(prevIndex => (prevIndex + 1) % images.length);
+    }, 3000);
 
     return () => clearInterval(interval);
   }, []);
@@ -36,7 +41,7 @@ const Navbar = () => {
   return (
     <div className="navbar-container">
       {location.pathname === '/' && (
-        <div className="gpt__navbar-background" style={{ backgroundImage: `url(${slide ? image2 : image1})` }}></div>
+        <div className="gpt__navbar-background" style={{ backgroundImage: `url(${images[currentImageIndex]})` }}></div>
       )}
       <div className={`gpt__navbar ${scrolled ? 'scrolled' : ''}`}>
         <div className="gpt__navbar-content">

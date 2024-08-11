@@ -1,42 +1,69 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './aboutUs.css';
-import image1 from '../../assets/wed1.jpg';
-import image2 from '../../assets/wed2.jpg';
+import image1 from '../../assets/Reception/DSC00953.jpg';
+import serviceImage from '../../assets/Couples/DSC02875.jpg'; 
+import image3 from '../../assets/Couples/G&C-81.jpg';
 import Review from '../review/Review';
 import FAQ from '../faq/Faq';
+import Contactus from '../contact/Contactus';
 
 const AboutUs = () => {
   return (
     <div className="about-us">
+      <header className="hero">
+        <h1>Top Bride Photography & Videography</h1>
+        <p>Crafting timeless wedding memories in Nairobi, Kenya</p>
+      </header>
+
       <div className="intro">
-        <h2>Top Bride Photographers and Videographers</h2>
+        <h2>Welcome</h2>
         <p>Discover a creative Wedding Photography and Videography hub nestled in Nairobi, Kenya.</p>
         <p>We are dedicated to crafting timeless wedding memories.</p>
         <p>Through the lens of documentary photography and film, we encapsulate the essence of your special day, narrating its narrative with emotive imagery and captivating storytelling.</p>
         <p>Welcome to an experience where every frame resonates with authenticity and artistry.</p>
       </div>
 
-      <div className='services'>
-        <h2><i>OUR SERVICES</i></h2>
-        <h3>Wedding Photography</h3><hr />
-        <div className="service">
-          <div className='service-text'>
-            <h4>Name</h4>
-            <p>Testimony</p>
+      <div className="section">
+        <div className="philosophy">
+          <div className="philosophy-text">
+            <h3>Our Philosophy</h3>
+            <p>At Top Bride Photography and Videography, we believe in creating authentic and unforgettable memories that showcase your love story in a beautiful, documentary or film format.</p>
+            <p>We strive to provide exceptional service, unwavering dedication, and a commitment to our clients' happiness.</p>
+            <p>Our mission is to help you capture the essence of your special day while ensuring that your memories are both beautiful and meaningful.</p>
           </div>
-          <div className='service-image'>
-            <img src={image1} alt="Testimony 1" />
+
+          <div className="philosophy-image">
+            <img src={image1} alt="Philosophy" />
           </div>
         </div>
 
-        <h3>Wedding Videography</h3><hr />
-        <div className="service">
-          <div className='service-image'>
-            <img src={image2} alt="Testimony 2" />
+        <div className="services">
+          <div className="service-image">
+            <img src={serviceImage} alt="Services" />
           </div>
-          <div className='service-text'>
-            <h4>Name</h4>
-            <p>Testimony</p>
+          <div className="service-text">
+            <h3>Our Services</h3>
+            <ul>
+              <li>Engagement Sessions: Capture the excitement and anticipation of your journey to the altar with a personalized engagement session.</li>
+              <li>Wedding Photography: From the first look to the last dance, we document every detail and moment of your wedding day.</li>
+              <li>Wedding Videography: Our cinematic wedding films bring your love story to life, capturing the laughter, tears, and joy of your celebration.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div className="chooseus">
+          <div className="chooseus-text">
+            <h3>Why Choose Us?</h3>
+            <ul>
+              <li>Personalized Approach: We take the time to get to know you as a couple, ensuring that our work reflects your personalities and love story.</li>
+              <li>Attention to Detail: We focus on the little details that make your wedding day unique, from the decor to the emotional moments.</li>
+              <li>High-Quality Products: We use state-of-the-art equipment and editing techniques to deliver stunning photos and films that stand the test of time.</li>
+              <li>Customer Satisfaction: Your happiness is our top priority. We're committed to providing you with exceptional service and beautiful memories.</li>
+            </ul>
+          </div>
+          <div className="chooseus-image">
+            <img src={image3} alt="Choose Us" />
           </div>
         </div>
       </div>
@@ -46,18 +73,16 @@ const AboutUs = () => {
         <p>Top Bride Photography and filming works in a logical and experienced approach by securing contracts through client inquiries or outreach from most social media platforms or phone calls.</p>
         <p>Upon agreement, we schedule sessions, provide equipment, and offer creative direction.</p>
         <p>After the shoot, we edit and deliver final content, ensuring client satisfaction and maintaining professional standards.</p>
-        <div className="button-container">
-          <p>You can view some of our work down here</p>
-          <a href="Wed1.jpg" className="button">View Photographs</a>
-          <a href="wed2.jpg" className="button">View Films</a>
-        </div>
       </div>
-      
-      <div>
+
+      <div className="button-container">
+        <Link to="/portfolio" className="button">View Photographs</Link>
+        <a href="/prtfolio" className="button">View Films</a>
+      </div>
+
+      <div className="additional-sections">
+        <Contactus />
         <Review />
-      </div>
-      
-      <div>
         <FAQ />
       </div>
     </div>

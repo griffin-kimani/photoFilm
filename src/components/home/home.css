@@ -1,58 +1,77 @@
-.introduction {
+.home-page .introduction {
   text-align: center;
-  margin: 100px;
+  margin: 80px auto; 
+  padding: 25px;
+  max-width: 1200px;
   color: #333;
 }
 
-.image-container {
+.home-page .introduction p {
+  margin-bottom: 40px; 
+}
+
+.home-page .image-container {
   display: flex;
   justify-content: center;
-  margin: 100px 0;
+  gap: 50px;
+  margin:100px 40px; /* Increased margin to create more gap */
+  margin-top: 160px; 
 }
 
-.image-box {
+.home-page .image-box {
   position: relative;
-  margin: 0 10px;
   overflow: hidden;
-  border-radius: 5px;
+  border-radius: 10px; /* Increased border-radius for a more modern look */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: 600px; /* Adjusted width for better responsiveness */
+  height: 450px; /* Increased height for a more visually appealing look */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Added box-shadow for a subtle 3D effect */
 }
 
-.image-box img {
-  width: 600px; 
-  height: 500px; 
+.home-page .image-box img {
+  width: 100%; 
+  height: 100%; 
+  object-fit: cover; 
   display: block;
-  object-fit: cover;
+  transition: transform 0.3s ease;
 }
 
-.hover-text {
+.home-page .image-box:hover img {
+  transform: scale(1.1); /* Added zoom effect on hover for visual appeal */
+}
+
+.home-page .hover-text {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   color: white;
-  font-size: 1.5rem;
+  font-size: 2rem; /* Increased font size for more emphasis */
   text-align: center;
+  background-color: rgba(0, 0, 0, 0.5); /* Added semi-transparent background for readability */
+  padding: 10px 20px;
+  border-radius: 5px;
   display: none;
 }
 
-.image-box:hover .hover-text {
+.home-page .image-box:hover .hover-text {
   display: block;
 }
 
-.label {
+.home-page .label {
   text-align: center;
-  margin-top: 10px;
-  font-size: 1.3rem;
-  color: #555;
+  margin-top: 20px;
+  font-size: 1.5rem;
+  color: #333;
 }
 
-.image-box a {
+.home-page .image-box a {
   display: block;
   text-decoration: none;
   color: inherit;
   transition: transform 0.3s ease;
 }
 
-.image-box a:hover {
-  transform: scale(1.05); 
+.home-page .image-box a:hover {
+  transform: scale(1.1); 
 }

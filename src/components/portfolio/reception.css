@@ -1,0 +1,87 @@
+.reception-gallery {
+    padding: 40px 20px;
+    margin: 40px auto;
+    max-width: 1300px;
+    background: linear-gradient(135deg, #f5f7fa 10%, #c3cfe2 100%);
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+    overflow: hidden;
+  }
+  
+  .reception-gallery h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 2.8rem;
+    color: #333;
+    font-family: 'Merriweather', serif;
+    letter-spacing: 1px;
+    position: relative;
+    z-index: 10;
+  }
+  
+  .gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    position: relative;
+    z-index: 10;
+  }
+  
+  .gallery-item {
+    overflow: hidden;
+    border-radius: 15px;
+    transition: transform 0.4s, box-shadow 0.4s;
+    position: relative;
+  }
+  
+  .gallery-item::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
+    opacity: 0;
+    transition: opacity 0.4s;
+    z-index: 1;
+  }
+  
+  .gallery-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+    transition: transform 0.4s ease;
+    object-fit: cover;
+    z-index: 0;
+  }
+  
+  .gallery-item:hover::before {
+    opacity: 1;
+  }
+  
+  .gallery-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+  }
+  
+  .gallery-item:hover img {
+    transform: scale(1.1);
+  }
+  
+  .reception-gallery::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../../assets/Brides/IMAGE (410).jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    opacity: 0.05;
+    z-index: 0;
+  }
+  
+  

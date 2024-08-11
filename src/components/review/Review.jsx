@@ -6,6 +6,7 @@ const Review = () => {
   const [rating, setRating] = useState(0);
   const [hoveredRating, setHoveredRating] = useState(0);
   const [comment, setComment] = useState('');
+  const [commentsList, setCommentsList] = useState([]);
 
   const handleStarClick = (star) => {
     setRating(star);
@@ -20,9 +21,11 @@ const Review = () => {
   };
 
   const handleSubmit = () => {
-    console.log(`Rating: ${rating}, Comment: ${comment}`);
-    setRating(0);
-    setComment('');
+    if (rating && comment) {
+      setCommentsList([...commentsList, { rating, comment }]);
+      setRating(0);
+      setComment('');
+    }
   };
 
   const renderStar = (star) => {
@@ -43,12 +46,13 @@ const Review = () => {
   };
 
   return (
+    <div className="review-container">
       <div className="review">
         <div className="stars">
           {[1, 2, 3, 4, 5].map(renderStar)}
         </div>
         <div className="counter">
-          <p>Rating out of 5: {rating}</p>
+          <p>Rating: {rating} out of 5</p>
         </div>
         <div className="comment-section">
           <TextField
@@ -70,6 +74,23 @@ const Review = () => {
           </Button>
         </div>
       </div>
+
+      {commentsList.length > 0 && (
+        <div className="comments-display">
+          <h3>Comments</h3>
+          {commentsList.map((item, index) => (
+            <div key={index} className="comment-item">
+              <div className="comment-rating">
+                {[...Array(item.rating)].map((_, i) => (
+                  <span key={i} className="star filled">★</span>
+                ))}
+              </div>
+              <p>{item.comment}</p>
+            </div>
+          ))}
+        </div>
+      )}
+    </div>
   );
 };
 

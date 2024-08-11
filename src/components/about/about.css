@@ -1,12 +1,12 @@
 .section {
-  padding: 20px;
+  padding: 60px;
   max-width: 1200px;
   margin: 0 auto;
   text-align: center;
 }
 
 .section .intro {
-  margin-bottom: 20px;
+  margin-bottom: 50px;
 }
 
 .section h2 {

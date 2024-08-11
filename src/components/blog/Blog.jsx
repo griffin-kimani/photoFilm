@@ -1,18 +1,18 @@
 import React from 'react';
 import './blog.css';
-import couple1 from '../../assets/wed1.jpg';
-import couple2 from '../../assets/wed2.jpg';
-import couple3 from '../../assets/wed3.jpg';
-import couple4 from '../../assets/wed4.jpg';
-import couple5 from '../../assets/wed5.jpg';
+import couple1 from '../../components/gallery/couple1/DSC00953.jpg';
+import couple2 from '../../components/gallery/couple2/G&C-81.jpg';
+import couple3 from '../../components/gallery/couple3/IMAGE (565).jpg';
+import couple4 from '../../components/gallery/couple4/image-17.jpg';
+import couple5 from '../../components/gallery/couple5/_LIC3071.jpg';
 
 const Blog = () => {
   const couples = [
-    { image: couple1, name: "John & Jane", place: "Nairobi", link: "/gallery/john-jane" },
-    { image: couple2, name: "Mike & Anna", place: "Mombasa", link: "/gallery/mike-anna" },
-    { image: couple3, name: "Paul & Kate", place: "Nakuru", link: "/gallery/paul-kate" },
-    { image: couple4, name: "Chris & Eva", place: "Eldoret", link: "/gallery/chris-eva" },
-    { image: couple5, name: "Tom & Sarah", place: "Kisumu", link: "/gallery/tom-sarah" },
+    { image: couple1, name: "John & Jane", place: "Nairobi", link: "/gallery/couple1" },
+    { image: couple2, name: "Mike & Anna", place: "Mombasa", link: "/gallery/couple2" },
+    { image: couple3, name: "Paul & Kate", place: "Nakuru", link: "/gallery/couple3" },
+    { image: couple4, name: "Chris & Eva", place: "Eldoret", link: "/gallery/couple4" },
+    { image: couple5, name: "Tom & Sarah", place: "Kisumu", link: "/gallery/couple5" },
   ];
 
   return (

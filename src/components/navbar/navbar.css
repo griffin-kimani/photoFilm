@@ -13,33 +13,37 @@ body, html {
 }
 
 .gpt__navbar-background {
-  position: relative; 
+  position: relative;
   top: 0;
   left: 0;
   width: 100%;
-  height: 100vh; 
+  height: 100vh;
   background-size: cover;
   background-position: center;
-  z-index: -1; 
-  transition: background-image 0.1s ease-in-out;
+  z-index: -1;
+  transition: background-image 4s ease-in-out;
 }
 
 .gpt__navbar {
-  position: fixed; 
-  top: 30px;
+  position: fixed;
+  top: 0;
+  left: 0;
   width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  z-index: 100; 
-  padding: 10px 60px;
-  color: white; 
-  transition: background-color 0.3s ease, color 0.3s ease;
+  z-index: 100;
+  padding: 60px 80px; 
+  color: white;
+  background: transparent;
+  transition: background-color 0.3s ease, color 0.3s ease, padding 0.3s ease;
 }
 
 .gpt__navbar.scrolled {
-  background-color: rgba(255, 255, 255, 0.9); 
-  color: black;
+  background-color: rgba(15, 15, 15, 0.95); 
+  color: rgb(15, 15, 15);
+  padding: 15px 60px; 
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); 
 }
 
 .gpt__navbar-content {
@@ -59,15 +63,40 @@ body, html {
 }
 
 .gpt__navbar-links-container a {
-  color: white;
+  color: rgb(10, 10, 10);
   text-decoration: none;
   font-weight: bold;
   font-size: 1.1rem;
-  transition: color 0.3s ease;
+  transition: color 0.3s ease, transform 0.3s ease;
+  position: relative;
+}
+
+.gpt__navbar-links-container a::after {
+  content: '';
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  background-color: #ff0000;
+  bottom: -5px;
+  left: 0;
+  transition: width 0.3s ease;
+}
+
+.gpt__navbar-links-container a:hover {
+  color: #ff0000;
+  transform: scale(1.1);
+}
+
+.gpt__navbar-links-container a:hover::after {
+  width: 100%;
 }
 
 .gpt__navbar.scrolled .gpt__navbar-links-container a {
-  color: black; 
+  color: black;
+}
+
+.gpt__navbar.scrolled .gpt__navbar-links-container a:hover {
+  color: #ff9800;
 }
 
 .gpt__navbar-menu {
@@ -88,20 +117,25 @@ body, html {
 .gpt__navbar-menu-container-links {
   display: flex;
   flex-direction: column;
-  gap: 10px;
-  padding: 10px;
+  gap: 15px;
+  padding: 20px;
 }
 
 .gpt__navbar-menu-container-links a {
   color: black;
   text-decoration: none;
   font-weight: bold;
-  font-size: 1rem;
+  font-size: 1.2rem;
+  transition: color 0.3s ease;
+}
+
+.gpt__navbar-menu-container-links a:hover {
+  color: #ff9800;
 }
 
 .scale-up-center {
   transform: scale(0.8);
-  animation: scale-up-center 0.4s forwards;
+  animation: scale-up-center 3s forwards;
 }
 
 @keyframes scale-up-center {
@@ -121,10 +155,10 @@ body, html {
 }
 
 .main-content {
-  padding: 120px 20px 20px; 
-  background: rgba(12, 12, 12, 0.9); 
-  position: relative; 
-  z-index: 1; 
+  padding: 120px 20px 20px;
+  background: rgba(255, 255, 255, 0.9);
+  position: relative;
+  z-index: 1;
 }
 
 .intro, .services {

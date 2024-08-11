@@ -1,6 +1,6 @@
 import React from 'react';
 import './footer.css';
-import { FaWhatsapp, FaInstagram } from 'react-icons/fa';
+import { FaWhatsapp, FaInstagram, FaPhone } from 'react-icons/fa';
 
 const Footer = () => {
   return (
@@ -16,11 +16,22 @@ const Footer = () => {
           </a>
         </div>
       </div>
+
+      <div className="footer-quotes">
+        <p>“Photography is the story I fail to put into words.” - Destin Sparks</p>
+        <p>“The best thing about a picture is that it never changes, even when the people in it do.” - Andy Warhol</p>
+      </div>
+
+      <div className="footer-call">
+        <p>Need assistance? <a href="tel:+123456789"><FaPhone /> Call Us Directly</a></p>
+      </div>
+
       <div className="footer-links">
         <a href="/about">About Us</a>
         <a href="/contact">Contact Us</a>
         <a href="/privacy">Privacy Policy</a>
       </div>
+
       <div className="footer-copyright">
         &copy; 2024 Your Company Name. All rights reserved.
       </div>

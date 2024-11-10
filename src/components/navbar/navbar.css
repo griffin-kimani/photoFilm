@@ -139,7 +139,7 @@ body, html {
 }
 
 @keyframes scale-up-center {
-  100% {
+  10% {
     transform: scale(1);
   }
 }

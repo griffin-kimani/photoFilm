@@ -1,4 +1,4 @@
-
+/* General Styles */
 body {
   font-family: 'Lato', sans-serif;
   color: #333;
@@ -8,7 +8,7 @@ body {
   box-sizing: border-box;
 }
 
-
+/* Hero Section */
 .hero {
   background-image: url('../../assets/Couples/DSC02794.jpg');
   background-size: cover;
@@ -30,7 +30,7 @@ body {
   font-weight: 300;
 }
 
-
+/* Intro Section */
 .intro {
   text-align: center;
   margin-bottom: 40px;
@@ -50,7 +50,7 @@ body {
   color: #666;
 }
 
-
+/* Section Container */
 .section {
   padding: 3.5rem 1.5rem;
   background-color: #f9f9f9;
@@ -58,6 +58,7 @@ body {
   margin-bottom: 100px;
 }
 
+/* Flex Layout Sections */
 .philosophy, .services, .chooseus {
   display: flex;
   align-items: center;
@@ -82,6 +83,7 @@ body {
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
 }
 
+/* How We Work Section */
 .how-we-work {
   text-align: center;
   background-color: #1d1c1c;
@@ -104,7 +106,7 @@ body {
   margin-bottom: 30px;
 }
 
-
+/* Button Container */
 .button-container {
   display: flex;
   justify-content: center;
@@ -132,4 +134,89 @@ body {
 
 .additional-sections {
   margin-top: 50px;
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+  .hero {
+    padding: 200px 20px;
+  }
+
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero p {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .philosophy, .services, .chooseus {
+    flex-direction: column;
+    padding: 20px;
+    margin: 30px 0;
+  }
+
+  .philosophy-text, .service-text, .chooseus-text {
+    padding-right: 0;
+    text-align: center;
+  }
+
+  .philosophy-image img, .service-image img, .chooseus-image img {
+    max-width: 300px;
+    margin-top: 20px;
+  }
+
+  .intro p,
+  .how-we-work p {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero {
+    padding: 150px 15px;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .hero p {
+    font-size: 1.2rem;
+  }
+
+  .section {
+    padding: 2rem 1rem;
+  }
+
+  .intro h2 {
+    font-size: 2rem;
+  }
+
+  .intro p {
+    font-size: 1rem;
+  }
+
+  .how-we-work {
+    padding: 80px 20px;
+  }
+
+  .how-we-work h3 {
+    font-size: 1.75rem;
+  }
+
+  .how-we-work p {
+    font-size: 1.1rem;
+  }
+
+  .button {
+    padding: 10px 20px;
+    font-size: 1rem;
+  }
+
+  .philosophy-image img, .service-image img, .chooseus-image img {
+    max-width: 250px;
+  }
 }

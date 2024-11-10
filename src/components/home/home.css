@@ -1,43 +1,44 @@
 .home-page .introduction {
   text-align: center;
-  margin: 80px auto; 
+  margin: 80px auto;
   padding: 25px;
   max-width: 1200px;
   color: #333;
 }
 
 .home-page .introduction p {
-  margin-bottom: 40px; 
+  margin-bottom: 40px;
 }
 
 .home-page .image-container {
   display: flex;
   justify-content: center;
   gap: 50px;
-  margin:100px 40px; /* Increased margin to create more gap */
-  margin-top: 160px; 
+  margin: 100px 40px;
+  margin-top: 160px;
+  flex-wrap: wrap; /* Enables stacking on smaller screens */
 }
 
 .home-page .image-box {
   position: relative;
   overflow: hidden;
-  border-radius: 10px; /* Increased border-radius for a more modern look */
+  border-radius: 10px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  width: 600px; /* Adjusted width for better responsiveness */
-  height: 450px; /* Increased height for a more visually appealing look */
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Added box-shadow for a subtle 3D effect */
+  width: 600px;
+  height: 450px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
 .home-page .image-box img {
-  width: 100%; 
-  height: 100%; 
-  object-fit: cover; 
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
   display: block;
   transition: transform 0.3s ease;
 }
 
 .home-page .image-box:hover img {
-  transform: scale(1.1); /* Added zoom effect on hover for visual appeal */
+  transform: scale(1.1); /* Adds zoom effect on hover */
 }
 
 .home-page .hover-text {
@@ -46,9 +47,9 @@
   left: 50%;
   transform: translate(-50%, -50%);
   color: white;
-  font-size: 2rem; /* Increased font size for more emphasis */
+  font-size: 2rem;
   text-align: center;
-  background-color: rgba(0, 0, 0, 0.5); /* Added semi-transparent background for readability */
+  background-color: rgba(0, 0, 0, 0.5);
   padding: 10px 20px;
   border-radius: 5px;
   display: none;
@@ -73,5 +74,29 @@
 }
 
 .home-page .image-box a:hover {
-  transform: scale(1.1); 
+  transform: scale(1.1);
+}
+
+/* Responsive styles */
+@media (max-width: 1024px) {
+  .home-page .image-box {
+    width: 450px;
+    height: 350px;
+  }
+}
+
+@media (max-width: 768px) {
+  .home-page .image-box {
+    width: 90vw;
+    height: auto;
+    margin-bottom: 20px;
+  }
+
+  .home-page .image-box img {
+    height: auto;
+  }
+  
+  .home-page .hover-text {
+    font-size: 1.5rem;
+  }
 }

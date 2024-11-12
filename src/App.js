@@ -1,5 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { Navigate } from 'react-router-dom';
 import { Footer } from './containers';
 import {
   Navbar,
@@ -59,6 +60,7 @@ const App = () => {
             <Route path="/gallery/couple3" element={<Couple3 />} />
             <Route path="/gallery/couple4" element={<Couple4 />} />
             <Route path="/gallery/couple5" element={<Couple5 />} />
+            <Route path="*" element={<Navigate to="/" />} />
           </Routes>
         </div>
         <Footer />

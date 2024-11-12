@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/photoFilm/static/css/main.456c95d5.css",
-    "main.js": "/photoFilm/static/js/main.5d20b225.js",
+    "main.css": "/photoFilm/static/css/main.14ffbb04.css",
+    "main.js": "/photoFilm/static/js/main.6124b6b0.js",
     "static/media/image-2.jpg": "/photoFilm/static/media/image-2.cab53c6dc3efc89fbfad.jpg",
     "static/media/image-13.jpg": "/photoFilm/static/media/image-13.4e242837d431dd31bd5e.jpg",
     "static/media/DSC02875.jpg": "/photoFilm/static/media/DSC02875.fa8aa0f71b935cad0a0f.jpg",
@@ -77,11 +77,11 @@
     "static/media/_LIC3071.jpg": "/photoFilm/static/media/_LIC3071.59e1a85e5fd773cdf27f.jpg",
     "static/media/_LIC3111.jpg": "/photoFilm/static/media/_LIC3111.a1054280762017d7f625.jpg",
     "index.html": "/photoFilm/index.html",
-    "main.456c95d5.css.map": "/photoFilm/static/css/main.456c95d5.css.map",
-    "main.5d20b225.js.map": "/photoFilm/static/js/main.5d20b225.js.map"
+    "main.14ffbb04.css.map": "/photoFilm/static/css/main.14ffbb04.css.map",
+    "main.6124b6b0.js.map": "/photoFilm/static/js/main.6124b6b0.js.map"
   },
   "entrypoints": [
-    "static/css/main.456c95d5.css",
-    "static/js/main.5d20b225.js"
+    "static/css/main.14ffbb04.css",
+    "static/js/main.6124b6b0.js"
   ]
 }
